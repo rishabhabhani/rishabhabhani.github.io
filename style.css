@@ -6,79 +6,13 @@
   --education-page-color: #e0a458;
   --connect-page-color: #3bb273;
   --nav-color: #f1f1f1;
-}
-
-/* The sidebar menu */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 200px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0px; /* Stay at the top */
-  left: 0;
-  background-color: var(--nav-color);
-  overflow-x: hidden; /* Disable horizontal scroll */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  width: 100%;
-  display: block;
-
-  font-size: 15px;
-  color: var(--home-page-color);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.sidenav .list-group-item {
-  line-height: 64px;
-  height: 64px;
-  padding: 0px 0px 0px 20px;
-}
-
-.sidenav a:hover, .list-group-item.active {
-  color: #f1f1f1;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-/* When you mouse over the navigation links, change their color */
-#home-nav:hover, #home-nav.list-group-item.active {
-  background-color: var(--home-page-color);
-  /* color: #111; */
-}
-
-#profile-nav:hover, #profile-nav.list-group-item.active {
-  background-color: var(--profile-page-color);
-  /* color: #111; */
-}
-
-#project-nav:hover, #project-nav.list-group-item.active {
-  background-color: var(--project-page-color);
-  /* color: #111; */
-}
-
-#technology-nav:hover, #technology-nav.list-group-item.active {
-  background-color: var(--technology-page-color);
-  /* color: #111; */
-}
-
-#education-nav:hover, #education-nav.list-group-item.active {
-  background-color: var(--education-page-color);
-  /* color: #111; */
-}
-
-#connect-nav:hover, #connect-nav.list-group-item.active {
-  background-color: var(--connect-page-color);
-  /* color: #111; */
+  --nav-size: 15%;
 }
 
 /* Style page content */
 .main {
   position: relative;
-  margin-left: 200px; /* Same as the width of the sidebar */
+  margin-left: var(--nav-size);
   overflow-x: hidden;
   box-shadow: -2px 0 4px rgba(0, 0, 0, 0.5);
   z-index: 3;
@@ -88,15 +22,20 @@
 .content {
   position: relative;
   z-index: 5;
-  overflow-x: hidden;
-  max-width: 100%;
-  backface-visibility: hidden;
+  
   height: 100%;
+  max-width: 100%;
+
+  backface-visibility: hidden;
+  
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
 /* Main View for all pages */
 .slate-view {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   padding: 0px 0px;
 }
@@ -111,18 +50,23 @@ h1 {
   line-height: 15vh;
   background-color: #f1f1f13f;
   text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .home-page {
-  padding: 35vh 0vh;
+  justify-content: center;
+  align-items: center;
   background-color: var(--home-page-color);
   color: #f1f1f1;
 }
 
 .home-page h1 {
-  font-size: 90px;
+  font-size: 8vw;
   background-color: transparent;
 }
+
+/* PROFILE PAGE CSS */
 
 .profile-page {
   background-color: var(--profile-page-color);
@@ -130,6 +74,10 @@ h1 {
 
 .profile-page h1 {
   color: var(--profile-page-color);
+}
+
+.profile-page .profile-container {
+  height: 100%;
 }
 
 .profile-picture {
@@ -163,7 +111,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100%;
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -184,9 +132,6 @@ h1 {
   width: 20%;
   text-align: end;
   font-weight: bold;
-
-  /* temp */
-  /* background-color: #f1f1f13f; */
 }
 
 .profile-content ul li .value {
@@ -199,6 +144,8 @@ h1 {
   font-size: 24px;
   border-left: #f1f1f13f 1px solid;
 }
+
+/* PROJECT PAGE CSS */
 
 .project-page {
   background-color: var(--project-page-color);
@@ -351,11 +298,6 @@ h1 {
 
 .connect-page {
   background-color: var(--connect-page-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh;
 }
 
 .connect-page h1 {
@@ -363,32 +305,40 @@ h1 {
 }
 
 .connect-page .connections {
+  min-height: 100vh;
   display: flex;
+
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  padding: 0px 20px;
-  flex: 2;
 }
 
 .connect-page .connections ul {
   list-style: none;
+
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
+  flex: 2;
 }
 
 .connect-page .connections ul li {
-  margin-right: 20px;
-  margin-left: 20px;
+  width: 15vw;
+  margin: 20px;
 }
 
 .connect-page img {
-  width: 200px;
+  width:15vw;
   border-radius: 50%;
   background-color: white;
+}
+
+.connect-page .connections .footer-message {
+  margin-bottom: 0px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -398,5 +348,51 @@ h1 {
   }
   .sidenav a {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .sidenav {
+    min-width: 64px;
+  }
+
+  .sidenav .list-group-item .nav_text {
+    font-size: 0px; 
+  }
+
+  .main {
+    margin-left: 64px;
+  }
+
+  .connect-page .connections ul li {
+    width: 30vw;
+    margin: 20px;
+  }
+  
+  .connect-page img {
+    width:25vw;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  h1 {
+    font-size: 8vw;
+    letter-spacing: 0px;
+    line-height: 10vw;
+  }
+
+  .education-page article .education-detail h2 {
+    font-size: 28px;
+    letter-spacing: 0px;
+  }
+  
+  .education-page article .education-detail h4 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .education-page article .education-detail p {
+    font-size: 14px;
+    letter-spacing: 0px;
   }
 }

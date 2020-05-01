@@ -1,0 +1,69 @@
+.sidenav {
+    height: 100%; 
+    width: var(--nav-size);
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    background-color: var(--nav-color);
+    overflow-x: hidden; /* Disable horizontal scroll */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    width: 100%;
+    display: block;
+  
+    font-size: 15px;
+    color: var(--home-page-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .sidenav .list-group-item {
+    line-height: 64px;
+    height: 64px;
+    padding: 0px 0px 0px 20px;
+  }
+  
+  .sidenav .list-group-item.active .fas {
+    display: block;
+  }
+  
+  .sidenav a:hover, .list-group-item.active {
+    color: #f1f1f1;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  #home-nav:hover, #home-nav.list-group-item.active {
+    background-color: var(--home-page-color);
+    /* color: #111; */
+  }
+  
+  #profile-nav:hover, #profile-nav.list-group-item.active {
+    background-color: var(--profile-page-color);
+    /* color: #111; */
+  }
+  
+  #project-nav:hover, #project-nav.list-group-item.active {
+    background-color: var(--project-page-color);
+    /* color: #111; */
+  }
+  
+  #technology-nav:hover, #technology-nav.list-group-item.active {
+    background-color: var(--technology-page-color);
+    /* color: #111; */
+  }
+  
+  #education-nav:hover, #education-nav.list-group-item.active {
+    background-color: var(--education-page-color);
+    /* color: #111; */
+  }
+  
+  #connect-nav:hover, #connect-nav.list-group-item.active {
+    background-color: var(--connect-page-color);
+    /* color: #111; */
+  }
