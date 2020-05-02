@@ -364,6 +364,18 @@ h1 {
     margin-left: 64px;
   }
 
+  .profile-content ul li label {
+    font-size: 12px;
+    text-align: start;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .profile-content ul li .value p {
+    padding-left: 10px;
+    font-size: 20px;
+  }
+
   .connect-page .connections ul li {
     width: 30vw;
     margin: 20px;
@@ -379,18 +391,6 @@ h1 {
     font-size: 8vw;
     letter-spacing: 0px;
     line-height: 10vw;
-  }
-
-  .profile-content ul li label {
-    font-size: 12px;
-    text-align: start;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  
-  .profile-content ul li .value p {
-    padding-left: 10px;
-    font-size: 20px;
   }
 
   .technology-page article {
