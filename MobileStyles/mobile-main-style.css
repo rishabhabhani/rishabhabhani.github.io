@@ -9,12 +9,17 @@
 
 /* Style page content */
 .main {
-  position: fixed;
-  height: 90vh;
-  max-height: 90vh;
+  position: relative;
   width: 100%;
+  height: 100%;
   display: block;
-  top: 0;
+
+  margin-left: 0px;
+  padding-bottom: var(--mobile-nav-size);
+  
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
   z-index: 3;
 }
 
