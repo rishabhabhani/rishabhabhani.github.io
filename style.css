@@ -383,7 +383,9 @@ h1 {
 
   .profile-content ul li label {
     font-size: 12px;
-    padding-right: 10px;
+    text-align: start;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   
   .profile-content ul li .value p {
