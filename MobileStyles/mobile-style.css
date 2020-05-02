@@ -1,0 +1,97 @@
+:root {
+  --home-page-color: #1e1e24;
+  --profile-page-color: #385a7c;
+  --project-page-color: #f97171;
+  --technology-page-color: #93a8ac;
+  --education-page-color: #e0a458;
+  --connect-page-color: #3bb273;
+  --nav-color: #f1f1f1;
+  --mobile-nav-size: 10vh;
+}
+
+.sidenav {
+  width: 100%;
+  height: var(--mobile-nav-size);
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--nav-color);
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  height: 100%;
+  display: block;
+  min-width: 15%;
+
+  font-size: 15px;
+  color: var(--home-page-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sidenav a .nav-ui {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav .list-group-item .nav-ui .nav_text {
+  display: none;
+}
+
+.sidenav a:hover,
+.list-group-item.active {
+  color: #f1f1f1;
+  border: none;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+/* When you mouse over the navigation links, change their color */
+#home-nav:hover,
+#home-nav.list-group-item.active {
+  background-color: var(--home-page-color);
+  /* color: #111; */
+}
+
+#profile-nav:hover,
+#profile-nav.list-group-item.active {
+  background-color: var(--profile-page-color);
+  /* color: #111; */
+}
+
+#project-nav:hover,
+#project-nav.list-group-item.active {
+  background-color: var(--project-page-color);
+  /* color: #111; */
+}
+
+#technology-nav:hover,
+#technology-nav.list-group-item.active {
+  background-color: var(--technology-page-color);
+  /* color: #111; */
+}
+
+#education-nav:hover,
+#education-nav.list-group-item.active {
+  background-color: var(--education-page-color);
+  /* color: #111; */
+}
+
+#connect-nav:hover,
+#connect-nav.list-group-item.active {
+  background-color: var(--connect-page-color);
+  /* color: #111; */
+}

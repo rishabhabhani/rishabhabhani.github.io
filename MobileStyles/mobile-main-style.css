@@ -1,0 +1,394 @@
+:root {
+  --home-page-color: #1e1e24;
+  --profile-page-color: #385a7c;
+  --project-page-color: #f97171;
+  --technology-page-color: #93a8ac;
+  --education-page-color: #e0a458;
+  --connect-page-color: #3bb273;
+}
+
+/* Style page content */
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  margin-left: 0px;
+  padding-bottom: var(--mobile-nav-size);
+  
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
+  z-index: 3;
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  
+  height: 100%;
+  max-width: 100%;
+
+  backface-visibility: hidden;
+  
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* Main View for all pages */
+.slate-view {
+  min-height: 100%;
+  padding: 0px 0px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* basic h1 to avoid repitation */
+h1 {
+  width: 100%;
+  padding: 5px;
+
+  font-size: 8vw;
+  line-height: 9vh;
+  height: 10vh;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+
+  background-color: #f1f1f13f;
+}
+
+.home-page {
+  justify-content: center;
+  align-items: center;
+  background-color: var(--home-page-color);
+  color: #f1f1f1;
+}
+
+.home-page h1 {
+  font-size: 8vw;
+  background-color: transparent;
+}
+
+/* PROFILE PAGE CSS */
+
+.profile-page {
+  background-color: var(--profile-page-color);
+}
+
+.profile-page h1 {
+  color: var(--profile-page-color);
+}
+
+.profile-picture {
+  width: 20vw;
+  height: 20vw;
+  border: 5px solid #212121;
+  border-radius: 10vw;
+  margin-top: 25px;
+}
+
+.profile-page .profile-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: #f1f1f13f 3px dashed;
+}
+
+.profile-about-content {
+  padding: 10px 10% 0px 10%;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+  flex: 1;
+}
+
+.profile-about-content p {
+  text-align: start;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  /* text-align: center; */
+}
+
+.profile-details ul {
+  list-style: none;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 0px 10px;
+  margin-bottom: 0px;
+}
+
+.profile-details ul li {
+  display: flex;
+  line-height: 48px;
+  margin-top: 12px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-details ul li label {
+  font-size: 12px;
+  padding-right: 8px;
+  text-align: end;
+  font-weight: bold;
+  width: 20%;
+}
+
+.profile-details ul li .value {
+  text-align: start;
+  width: 80%;
+}
+
+.profile-details ul li .value p {
+  padding-left: 8px;
+  font-size: 18px;
+  border-left: #f1f1f13f 1px solid;
+}
+
+/* PROJECT PAGE CSS */
+
+.project-page {
+  background-color: var(--project-page-color);
+}
+
+.project-page h1 {
+  color: var(--project-page-color);
+}
+
+.project-page .row {
+  margin: 20px 0px 0px 0px;
+}
+
+.project-page .card {
+  box-shadow: 
+    0 3px 4px -3px rgba(0, 0, 0, 0.2), 
+    0 3px 4px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-page .card img {
+  border-bottom: 2px dashed var(--project-page-color);
+}
+
+.embed-responsive .card-img-top {
+  object-fit: cover;
+}
+
+/* TECHNOLOGY PAGE CSS */
+.technology-page {
+  background-color: var(--technology-page-color);
+  padding-bottom: 24px;
+}
+
+.technology-page h1 {
+  color: var(--technology-page-color);
+}
+
+.technology-page article {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 20px;
+}
+
+.technology-page article h2 {
+  font-size: 28px;
+  padding-left: 40px;
+  padding-right: 56px;
+}
+
+.technology-page article .item-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.technology-page article .item-list li {
+  margin: 5px 5px 5px 5px;
+  padding: 4px 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--home-page-color);
+  background-color: var(--nav-color);
+  box-shadow: 
+    0 3px 4px -3px rgba(0, 0, 0, 0.2), 
+    0 3px 4px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 150px;
+  width: 40%;
+}
+
+.technology-page article .item-list .top-skill {
+  border: 4px solid green;
+}
+
+.technology-page article .item-list li img {
+  display: block;
+  /* width: 80px; */
+  height: 80px;
+  margin-bottom: 4px;
+  padding: 2px;
+}
+
+.technology-page article .item-list li span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.technology-page article .item-list li .top-skill-tag {
+  color: green;
+  font-size: 10px;
+}
+
+/* EDUCATION PAGE CSS */
+
+.education-page {
+  background-color: var(--education-page-color);
+}
+
+.education-page h1 {
+  color: var(--education-page-color);
+}
+
+.education-page article {
+  padding: 15px 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  border-bottom: 2px solid #f1f1f13f;
+}
+
+.education-page article img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* border: 1px solid black; */
+  box-shadow: 
+    0 3px 4px -3px rgba(0, 0, 0, 0.5), 
+    0 3px 4px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.education-page article .education-detail {
+  padding: 10px 20px;
+}
+
+.education-page article .education-detail h2 {
+  font-size: 28px;
+  letter-spacing: 0px;
+}
+
+.education-page article .education-detail h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.education-page article .education-detail p {
+  font-size: 14px;
+  letter-spacing: 0px;
+}
+
+/* CONNECTION PAGE CSS */
+
+.connect-page {
+  background-color: var(--connect-page-color);
+}
+
+.connect-page h1 {
+  color: var(--connect-page-color);
+}
+
+.connect-page .connections {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.connect-page .connections .social-profile {
+  flex: 1;
+  margin-top: 50px;
+}
+
+.connect-page .connections ul {
+  list-style: none;
+
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.connect-page .connections ul li {
+  margin: 10px;
+}
+
+.connect-page img {
+  width: 35vw;
+  border-radius: 50%;
+  background-color: white;
+}
+
+@media only screen and (orientation: landscape) {
+
+  /* Main Page */
+  h1 {  
+    font-size: 8vw;
+    line-height: 8vw;
+    height: 10vw;
+  }
+
+  .technology-page article .item-list {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .technology-page article .item-list li {
+    height: 150px;
+    width: 18%;
+  }
+
+  .education-page article {
+    padding: 15px 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .connect-page img {
+    width: 18vw;
+  }
+}
