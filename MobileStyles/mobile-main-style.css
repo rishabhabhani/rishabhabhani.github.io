@@ -7,32 +7,37 @@
   --connect-page-color: #3bb273;
 }
 
+.flex-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 /* Style page content */
 .main {
   position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
+  display: flex;
 
-  margin-left: 0px;
-  padding-bottom: var(--mobile-nav-size);
-  
   overflow-x: hidden;
   overflow-y: hidden;
-  
+
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+
   z-index: 3;
+  flex: 1;
 }
 
 .content {
   position: relative;
   z-index: 5;
-  
+
   height: 100%;
   max-width: 100%;
 
   backface-visibility: hidden;
-  
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 
   overflow-x: hidden;
   overflow-y: scroll;
@@ -55,6 +60,7 @@ h1 {
   font-size: 8vw;
   line-height: 9vh;
   height: 10vh;
+
   font-weight: bold;
   letter-spacing: 2px;
   text-align: center;
@@ -70,7 +76,6 @@ h1 {
 }
 
 .home-page h1 {
-  font-size: 8vw;
   background-color: transparent;
 }
 
@@ -85,11 +90,12 @@ h1 {
 }
 
 .profile-picture {
-  width: 20vw;
-  height: 20vw;
   border: 5px solid #212121;
   border-radius: 10vw;
   margin-top: 25px;
+
+  width: 20vw;
+  height: 20vw;
 }
 
 .profile-page .profile-about {
@@ -97,8 +103,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 0px;
+
   border-bottom: #f1f1f13f 3px dashed;
+  padding: 10px 0px;
 }
 
 .profile-about-content {
@@ -117,8 +124,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 0px;
   /* text-align: center; */
+
+  padding: 10px 0px;
 }
 
 .profile-details ul {
@@ -156,6 +164,12 @@ h1 {
   border-left: #f1f1f13f 1px solid;
 }
 
+@media only screen and (max-width: 990) {
+  .main {
+    width: 100%;
+  }
+}
+
 /* PROJECT PAGE CSS */
 
 .project-page {
@@ -171,9 +185,7 @@ h1 {
 }
 
 .project-page .card {
-  box-shadow: 
-    0 3px 4px -3px rgba(0, 0, 0, 0.2), 
-    0 3px 4px rgba(0, 0, 0, 0.1),
+  box-shadow: 0 3px 4px -3px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.1),
     0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -229,9 +241,7 @@ h1 {
   align-items: center;
   color: var(--home-page-color);
   background-color: var(--nav-color);
-  box-shadow: 
-    0 3px 4px -3px rgba(0, 0, 0, 0.2), 
-    0 3px 4px rgba(0, 0, 0, 0.1),
+  box-shadow: 0 3px 4px -3px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.1),
     0 2px 4px rgba(0, 0, 0, 0.1);
   height: 150px;
   width: 40%;
@@ -289,9 +299,7 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   /* border: 1px solid black; */
-  box-shadow: 
-    0 3px 4px -3px rgba(0, 0, 0, 0.5), 
-    0 3px 4px rgba(0, 0, 0, 0.2),
+  box-shadow: 0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 3px 4px rgba(0, 0, 0, 0.2),
     0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -325,16 +333,18 @@ h1 {
 }
 
 .connect-page .connections {
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  flex: 1;
 }
 
 .connect-page .connections .social-profile {
+  width: 100%;
   flex: 1;
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .connect-page .connections ul {
@@ -362,9 +372,8 @@ h1 {
 }
 
 @media only screen and (orientation: landscape) {
-
   /* Main Page */
-  h1 {  
+  h1 {
     font-size: 8vw;
     line-height: 8vw;
     height: 10vw;
@@ -390,5 +399,153 @@ h1 {
 
   .connect-page img {
     width: 18vw;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .flex-body {
+    flex-direction: row;
+  }
+
+  .sidenav {
+    width: 20%;
+    height: 100%;
+    overflow-x: hidden;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .sidenav a {
+    width: 100%;
+    display: block;
+    max-height: 10%;
+  }
+
+  .sidenav a .nav-ui {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .sidenav .list-group-item .nav-ui .nav_text {
+    display: block;
+    padding-left: 10px;
+  }
+
+  .sidenav a:hover,
+  .list-group-item.active {
+    color: #f1f1f1;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .main {
+    height: 100%;
+    box-shadow: -3px 0px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-height: 100%;
+
+    backface-visibility: hidden;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .slate-view {
+    min-height: 100%;
+    padding: 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 10vh;
+    line-height: 12vh;
+    height: 12vh;
+  }
+
+  .home-page h1 {
+    font-size: 18vh;
+    line-height: 20vh;
+    height: 20vh;
+  }
+
+  .profile-page .profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+  }
+
+  .profile-picture {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .profile-about {
+    max-width: 50%;
+    padding: 0px 10px 0px 0px;
+    border-right: #f1f1f13f 3px dashed;
+  }
+
+  .profile-details {
+    padding: 0px 0px 0px 10px;
+    flex: 1;
+  }
+
+  .connect-page img {
+    width: 15vw;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .sidenav {
+    width: 15%;
+  }
+
+  .home-page h1 {
+    font-size: 20vh;
+    line-height: 22vh;
+    height: 22vh;
+  }
+
+  .education-page article {
+    padding: 15px 40px;
+  }
+
+  .education-page article img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .education-page article .education-detail {
+    padding: 10px 0px 10px 40px;
+  }
+  
+  .education-page article .education-detail h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .education-page article .education-detail h4 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .education-page article .education-detail p {
+    font-size: 16px;
+    letter-spacing: 0px;
   }
 }
