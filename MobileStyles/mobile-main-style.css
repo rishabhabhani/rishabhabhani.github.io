@@ -103,8 +103,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  border-bottom: #f1f1f13f 3px dashed;
   padding: 10px 0px;
 }
 
@@ -167,6 +165,10 @@ h1 {
 @media only screen and (max-width: 990) {
   .main {
     width: 100%;
+  }
+  
+  .profile-page .profile-about {
+    border-bottom: #f1f1f13f 3px dashed;
   }
 }
 
@@ -497,6 +499,7 @@ h1 {
   .profile-about {
     max-width: 50%;
     padding: 0px 10px 0px 0px;
+    border-bottom: none;
     border-right: #f1f1f13f 3px dashed;
   }
 
